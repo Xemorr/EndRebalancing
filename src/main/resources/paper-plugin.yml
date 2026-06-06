@@ -1,0 +1,7 @@
+name: EndRebalancing
+description: Rebalances the end for multiplayer servers
+version: '${version}'
+main: me.xemor.endRebalancing.EndRebalancing
+api-version: '26.1.2'
+folia-supported: true
+loader: me.xemor.endRebalancing.DependencyLoader

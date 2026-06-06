@@ -1,0 +1,52 @@
+dragon:
+  enabled: true
+  spawn_health: 200.0
+  damage_received_multiplier: 0.5
+  melee_attack_multiplier: 2.0
+  # Whether explosion damage (TNT, beds, etc.) to the dragon is cancelled
+  prevent_explosion_damage: true
+  # How many times crystals respawn during the fight. Thresholds are evenly distributed.
+  # e.g. 3 → 75%, 50%, 25%;  4 → 80%, 60%, 40%, 20%
+  crystal_respawn_count: 3
+  fireball:
+    # Also controls whether dragon fireballs that hit the dragon itself are cancelled
+    enabled: true
+    fireball_multiplier: 2.0
+    fireball_fire_ticks: 100
+    # Whether endermen near a player hit by the dragon's acid cloud will target that player
+    endermen_target_victims: true
+  phase_randomization:
+    enabled: true
+    # Probability (0.0-1.0) that the dragon strafes instead of flying to portal
+    strafe_chance: 0.5
+  crystal_hardmode:
+    enabled: true
+    # Number of hits required to destroy an end crystal
+    hits_required: 3
+    # Extra hits required on crystals that respawn during the fight
+    additional_respawn_hits_required: 2
+    damager_message: "<red>This crystal requires <hits_remaining> more hit(s) to destroy!"
+  top_damagers:
+    enabled: true
+    count: 3
+    broadcast_message: "<gold><bold><name></bold> placed #<position> in damage dealt to the Ender Dragon!"
+    # Commands run per position (1 = most damage). Use %name% for the player's name.
+    commands:
+      "1": []
+      "2": []
+      "3": []
+
+elytra:
+  enabled: true
+  friction_multiplier: 0.99
+  # Compared against velocity.lengthSquared() - gliding stops above this threshold
+  max_velocity_squared: 4.0
+  # Multiplier in comparison to normal firework speed
+  firework_boost_multiplier: 0.5
+  allow_fireworks: true
+
+drop_shulker_box_contents_on_break:
+  enabled: true
+
+prevent_chorus_fruit_teleportation_through_blocks:
+  enabled: true
