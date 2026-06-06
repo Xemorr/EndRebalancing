@@ -27,6 +27,7 @@ dependencies {
     shadow("space.arim.morepaperlib:morepaperlib:0.4.3")
     shadow("me.xemor:foliahacks:1.7.4")
     shadow("io.papermc:paperlib:1.0.7")
+    shadow("org.bstats:bstats-bukkit:3.2.1")
 }
 
 java {
@@ -38,6 +39,7 @@ tasks.shadowJar {
     relocate("space.arim.morepaperlib", "me.xemor.endrebalancing.morepaperlib")
     relocate("me.xemor.foliahacks", "me.xemor.endrebalancing.foliahacks")
     relocate("io.papermc.paperlib", "me.xemor.endrebalancing.paperlib")
+    relocate("org.bstats", "me.xemor.endrebalancing.org.bstats")
     configurations = listOf(project.configurations.shadow.get())
     val folder = System.getenv("pluginFolder")
     destinationDirectory.set(file(folder))

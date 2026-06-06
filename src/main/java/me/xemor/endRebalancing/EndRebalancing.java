@@ -17,6 +17,7 @@ public final class EndRebalancing extends JavaPlugin {
         saveResource("config.yml", false);
         config = PluginConfig.load(new File(getDataFolder(), "config.yml"));
         foliaHacks = new FoliaHacks(this);
+        new MetricsHandler(this, config);
 
         if (config.dragon().enabled()) {
             register(new DragonPhaseFeature(config.dragon()));
